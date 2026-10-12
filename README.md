@@ -15,17 +15,22 @@
 </div>
 
 ---
+<br>
 
 ## ✨ Project Overview
 
 This project uses MySQL to model a small real-estate business and analyse property listings, agent activity, customer types, and recorded sale/rental transactions. The SQL script includes sample data and queries for filtering, joining, aggregating, ranking, and comparing records.
+<br>
+<br>
 
 > **Dataset note:** The script uses five sample properties and five transactions. The records are illustrative and are not live real-estate market data.
+<br>
 
 ## 🧭 Entity Relationship Diagram
 
 ![Real Estate ER Diagram](assets/real-estate-erd.png)
-
+<br>
+<br>
 
 
 ### Relationship map
@@ -37,8 +42,11 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `customers` | `transactions` | One-to-many | `transactions.customer_id` → `customers.customer_id` |
 
 **PK** = Primary Key, a unique identifier for a row. **FK** = Foreign Key, a column referencing a row in another table. **1:N** = one-to-many.
+<br>
+<br>
 
 ## 🗂️ Database Tables
+<br>
 
 ### `agents`
 
@@ -48,6 +56,7 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `agent_name` | `VARCHAR(100)` | — | Agent name |
 | `city` | `VARCHAR(50)` | — | Agent's city |
 | `experience_years` | `INT` | — | Years of experience |
+<br>
 
 
 
@@ -60,6 +69,7 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `city` | `VARCHAR(50)` | — | Customer's city |
 | `customer_type` | `VARCHAR(20)` | — | Buyer or Tenant |
 
+<br>
 
 
 ### `properties`
@@ -74,6 +84,7 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `listing_date` | `DATE` | — | Date the property was listed |
 | `agent_id` | `INT` | FK | References `agents.agent_id` |
 
+<br>
 
 
 ### `transactions`
@@ -87,12 +98,16 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `transaction_date` | `DATE` | — | Transaction date |
 | `sale_price` | `DECIMAL(12,2)` | — | Amount recorded for the transaction |
 
+<br>
+<br>
 
 
 
 ## 🔗 Example Data Connections
 
 ![Table relationship example](assets/table-relationships.png)
+<br>
+<br>
 
 
 
@@ -125,6 +140,8 @@ JOIN properties AS p
 JOIN customers AS c
     ON t.customer_id = c.customer_id;
 ```
+<br>
+<br>
 
 
 ## 🎯 Business Questions Explored
@@ -139,6 +156,8 @@ JOIN customers AS c
 - How are customers distributed between Buyer and Tenant types?
 - How can properties be categorised into budget, mid-range, and luxury segments?
 - How can sales be ranked by agent and listing price?
+<br>
+<br>
 
 
 ## 🧰 SQL Skills Demonstrated
@@ -152,6 +171,8 @@ JOIN customers AS c
 - Date functions: `YEAR()`, `MONTH()`, `MONTHNAME()`
 - Common Table Expressions (CTEs)
 - Window functions: `RANK()`, `ROW_NUMBER()`, `DENSE_RANK()`
+<br>
+<br>
 
 
 
@@ -161,6 +182,8 @@ JOIN customers AS c
 2. Open `real_estate_analysis.sql`.
 3. Run the database, table creation, and sample-data statements.
 4. Execute the analysis queries and review the result sets.
+<br>
+<br>
 
 
 
@@ -174,6 +197,8 @@ real-estate-management-sales-analysis/
     ├── real-estate-erd.png
     └── table-relationships.png
 ```
+<br>
+<br>
 
 
 ## 🧹 Notes Before Running the Full SQL Script
