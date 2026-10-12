@@ -46,7 +46,7 @@ This project uses MySQL to model a small real-estate business and analyse proper
 <br>
 
 ## 🗂️ Database Tables
-<br>
+
 
 ### `agents`
 
@@ -68,7 +68,6 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `customer_name` | `VARCHAR(100)` | — | Customer name |
 | `city` | `VARCHAR(50)` | — | Customer's city |
 | `customer_type` | `VARCHAR(20)` | — | Buyer or Tenant |
-
 <br>
 
 
@@ -83,7 +82,6 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `listing_price` | `DECIMAL(12,2)` | — | Listing price in the sample data |
 | `listing_date` | `DATE` | — | Date the property was listed |
 | `agent_id` | `INT` | FK | References `agents.agent_id` |
-
 <br>
 
 
@@ -207,6 +205,7 @@ real-estate-management-sales-analysis/
 - `sale_price` is used to store both sale amounts and rental amounts. A clearer future schema could rename it to `transaction_amount`.
 - The current conversion-rate query counts transactions for sold properties using a left join, but it should be reviewed carefully to ensure the denominator and distinct sold-property count match the intended business definition.
 - The dataset is small and intended for SQL practice; use more records before drawing business conclusions.
+<br>
 
 ## 👤 Author
 
