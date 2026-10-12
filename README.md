@@ -1,6 +1,8 @@
 <div align="center">
 
+
 # 🏡 Real Estate Management & Sales Analysis
+
 
 ### A MySQL portfolio project exploring property listings, customers, agents, sales, and rentals.
 
@@ -24,6 +26,8 @@ This project uses MySQL to model a small real-estate business and analyse proper
 
 ![Real Estate ER Diagram](assets/real-estate-erd.png)
 
+
+
 ### Relationship map
 
 | Parent table | Child table | Relationship | Foreign-key connection |
@@ -45,6 +49,8 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `city` | `VARCHAR(50)` | — | Agent's city |
 | `experience_years` | `INT` | — | Years of experience |
 
+
+
 ### `customers`
 
 | Column | Data type | Key | Description |
@@ -53,6 +59,8 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `customer_name` | `VARCHAR(100)` | — | Customer name |
 | `city` | `VARCHAR(50)` | — | Customer's city |
 | `customer_type` | `VARCHAR(20)` | — | Buyer or Tenant |
+
+
 
 ### `properties`
 
@@ -66,6 +74,8 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `listing_date` | `DATE` | — | Date the property was listed |
 | `agent_id` | `INT` | FK | References `agents.agent_id` |
 
+
+
 ### `transactions`
 
 | Column | Data type | Key | Description |
@@ -77,9 +87,15 @@ This project uses MySQL to model a small real-estate business and analyse proper
 | `transaction_date` | `DATE` | — | Transaction date |
 | `sale_price` | `DECIMAL(12,2)` | — | Amount recorded for the transaction |
 
+
+
+
 ## 🔗 Example Data Connections
 
 ![Table relationship example](assets/table-relationships.png)
+
+
+
 
 The key joins used to combine the tables:
 
@@ -110,6 +126,7 @@ JOIN customers AS c
     ON t.customer_id = c.customer_id;
 ```
 
+
 ## 🎯 Business Questions Explored
 
 - How many properties, agents, and customers are in the database?
@@ -123,6 +140,7 @@ JOIN customers AS c
 - How can properties be categorised into budget, mid-range, and luxury segments?
 - How can sales be ranked by agent and listing price?
 
+
 ## 🧰 SQL Skills Demonstrated
 
 - Database and table creation
@@ -135,12 +153,16 @@ JOIN customers AS c
 - Common Table Expressions (CTEs)
 - Window functions: `RANK()`, `ROW_NUMBER()`, `DENSE_RANK()`
 
+
+
 ## 🚀 How to Run
 
 1. Install MySQL Server and open MySQL Workbench or another MySQL client.
 2. Open `real_estate_analysis.sql`.
 3. Run the database, table creation, and sample-data statements.
 4. Execute the analysis queries and review the result sets.
+
+
 
 ### Repository Structure
 
@@ -152,6 +174,7 @@ real-estate-management-sales-analysis/
     ├── real-estate-erd.png
     └── table-relationships.png
 ```
+
 
 ## 🧹 Notes Before Running the Full SQL Script
 
